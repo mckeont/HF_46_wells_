@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>46 Wells to Investigate Further</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+</head>
+<style>
+.sidebar {
+  position: absolute;
+  left: 0px;
+  width: 300px;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding: 20px;
+  font-size: 16px;
+  border: solid;
+  background-color: #bdc3c7;
+}
+.main-heading {
+    font-size: 15px;
+} 
+
+.button {
+  width: 100px;
+  height: 200px;
+  margin-top: 30px;
+  border: solid;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 10%;
+}
+/* .ceetImage {
+  position: absolute;
+  height: 12%;
+  width: 85%;
+} */
+
+</style>
+
+<body>
+
+  <div class="sidebar">
+  <font color="#3D9970"><center><h2 id="main-heading" >HF Well Explorer </h2></center></font>
+  <div><p> These are the 46 HF wells selected by Krissy. <br> </br> The icons represent all 46 HF wells. <br> </br>
+    The orange circles are 1000 foot buffers from each well.<br> </br>
+    The blue polylines are segments of Pennsylvania streams captured by the buffers.<br> </br>
+
+    Hover over each well and stream to learn more about their names. <br> </br>
+
+    questions: e-mail Tom McKeon at mckeont@upenn.edu
+    <br> </br>
+    Stream data source:  (https://www.pasda.psu.edu/uci/DataSummary.aspx?dataset=1233)
+    <!---BUTTONS---->
+    <!-- <center><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">More Info <br> About App</button></center> -->
+    <div></div>
+    <dd>
+  <!-- <img class="ceetImage" src = "images/CEET2.png" align= "center"></img> -->
+</dd>
+
+<div></div>
+  </div>
+  <!-- Modal -->
+  <!-- <div id="myModal" class="modal fade modal-dialog modal-md modalbox container-fluid" role="dialog">
+    <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+           <h4 class="modal-title text-center"><b>Welcome to the Lead Sampling Database!<b></h4>
+         </div>
+         <div class="modal-body text-center well">
+           <p style="margin-left:20px "> Explore Our Lead Soil Sampling Data! <br>
+             Click a point to access pop-up information <br>
+            </p>
+         </div>
+         <div class="modal-body text-center well" style="background-color: tomato">
+           <p style="padding-left:25px">
+              This map is continuously updated.<br>
+           Developed by Tom McKeon </p></h6>
+         </div>
+         <div class= "modal-body well">
+<center>
+           <a><button id="lanc" class="button1">  Lancaster </button><a>
+           <a><button id="philly" class="button1"> Philadelphia</button><a>
+</center>
+         </div>
+         <div class="modal-footer text-center well">
+           <h6>
+             <p style="padding-right:200px">
+               <em>Disclaimer</em>:<br>
+               Points are not exact.<br>
+               GPS data are estimates based on near addresses<br>
+               Lead soil levels vary greatly even within inches. <br>
+               This is only meant to act as a general reference.
+            </p>
+          </h6>
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-End of Modal -->
+   <!-- <button> -->
+
+    <!-- JS IMPORTS -->
+    <div id="map" style=" position: fixed; right: 0; left: 300px; top: 0; bottom: 0 "></div>
+ <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src= "js/jquery-2.2.0.js"></script>
+    <script src= "js/bootstrap.js"></script>
+    <script src= "http://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    <script src= "js/setup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <!-- <script src= "js/leadSample.js"></script> -->
+    <script src= "js/wells.js"> </script>
+    <script src= "js/clipstream.js"> </script>
+    <script src= "js/buffer.js"> </script>
+    <script src= "js/zip.js"> </script>
+    <!-- <script src= "js/lancaster.js"> </script> -->
+    <script src= "js/main.js"></script>
+</body>
+</html>
