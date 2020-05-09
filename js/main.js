@@ -36,6 +36,24 @@ function onEachFeature(feature, layer) {
     });
 }
 
+
+map.on('draw:created', function (e) {
+        var type = e.layerType,
+        layer = e.layer;
+
+        if (type === 'marker') {
+            map.on('click', function(e) {
+                var lat = e.latlng.lat;
+                var lng = e.latlng.lng;
+                alert ("Latitude : " + lat + "\nLongitude : " + lng);
+        }),
+
+            layer.bindPopup(
+            'e.latlng.lat');
+        }
+
+        drawnItems.addLayer(layer);
+    });
   //new icon parameters
 
 // $(document).ready(function() {
@@ -64,7 +82,7 @@ var geojson = L.geoJson(wells, {
 }).bindPopup(function (layer) {
    return "Operator: " + layer.feature.properties.OPERATOR + "<dd>"
    + "OGO: " + layer.feature.properties.OGO + "<dd>" +
-   "Farm: " + layer.feature.properties.FARM ;
+   "Farm: " + layer.feature.properties.FARM 
 }).addTo(map);
 
  var geojson = L.geoJson(clipstream, {
