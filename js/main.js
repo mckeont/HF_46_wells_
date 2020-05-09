@@ -36,24 +36,6 @@ function onEachFeature(feature, layer) {
     });
 }
 
-
-map.on('draw:created', function (e) {
-        var type = e.layerType,
-        layer = e.layer;
-
-        if (type === 'marker') {
-            map.on('click', function(e) {
-                var lat = e.latlng.lat;
-                var lng = e.latlng.lng;
-                alert ("Latitude : " + lat + "\nLongitude : " + lng);
-        }),
-
-            layer.bindPopup(
-            'e.latlng.lat');
-        }
-
-        drawnItems.addLayer(layer);
-    });
   //new icon parameters
 
 // $(document).ready(function() {
@@ -68,21 +50,21 @@ map.on('draw:created', function (e) {
 // //
 // //
 
-
-//  var geojson = L.geoJson(zip, {
-//   style: myStyle,
-//   onEachFeature: onEachFeature
-// }).bindPopup(function (layer) {
-//     return layer.feature.properties.CODE;
-// }).addTo(map);
-
-var geojson = L.geoJson(wells, {
+var geojson = L.geoJson(hf, {
  // style: myStyle,
  // onEachFeature: onEachFeature
 }).bindPopup(function (layer) {
-   return "Operator: " + layer.feature.properties.OPERATOR + "<dd>"
+   return "Operator: " + layer.feature.properties.operator + "<dd>"
    + "OGO: " + layer.feature.properties.OGO + "<dd>" +
-   "Farm: " + layer.feature.properties.FARM
+   "API: " + layer.feature.properties.API + "<dd>" + "Farm: " + layer.feature.properties.farm + "<dd>" +
+   "Spud Date: " + layer.feature.properties.spud_date  + "<dd>" + "Well Type: " + layer.feature.properties.well_type + "<dd>" +
+   "Unconventional: " + layer.feature.properties.unconventional + "<dd>" + "Configuration: " + layer.feature.properties.configuration  + "<dd>" +
+   "coordinates: " + layer.feature.properties.lat + " " + layer.feature.properties.lon + "<dd>" +
+   "County: " + layer.feature.properties.COUNTY + "<dd>" + layer.feature.properties.MUNICIPALITY + "<dd>" +
+   "Address: " + layer.feature.properties.ADDRESS + "<dd>" + "City: " + layer.feature.properties.CITY + "<dd>" +
+   "Well Pad: " + layer.feature.properties.WELL_PAD + "<dd>" + "Well Pad ID: "  + layer.feature.properties.WELL_PAD_ID + "<dd>" +
+   "Site ID: " + layer.feature.properties.SITE_ID + "<dd>" + "Primary Facility ID: "  + layer.feature.properties.PRIMARY_FACILITY_ID + "<dd>" +
+   "Clinet ID: " + layer.feature.properties.CLIENT_ID
 }).addTo(map);
 
  var geojson = L.geoJson(clipstream, {
