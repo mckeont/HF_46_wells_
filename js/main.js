@@ -82,7 +82,7 @@ var geojson = L.geoJson(wells, {
 }).bindPopup(function (layer) {
    return "Operator: " + layer.feature.properties.OPERATOR + "<dd>"
    + "OGO: " + layer.feature.properties.OGO + "<dd>" +
-   "Farm: " + layer.feature.properties.FARM 
+   "Farm: " + layer.feature.properties.FARM
 }).addTo(map);
 
  var geojson = L.geoJson(clipstream, {
