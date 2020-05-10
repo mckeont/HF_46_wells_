@@ -16,6 +16,14 @@ var bufferStyle = {
     "weight": 5,
     "opacity": 6
 };
+
+var majorStyle = {
+    "color": "Blue",
+    "weight": 5,
+    "opacity": 6
+};
+
+
 //Highlighting Feature
 function highlightFeature(e) {
     var layer = e.target;
@@ -65,6 +73,12 @@ var geojson = L.geoJson(hf, {
    "Well Pad: " + layer.feature.properties.WELL_PAD + "<dd>" + "Well Pad ID: "  + layer.feature.properties.WELL_PAD_ID + "<dd>" +
    "Site ID: " + layer.feature.properties.SITE_ID + "<dd>" + "Primary Facility ID: "  + layer.feature.properties.PRIMARY_FACILITY_ID + "<dd>" +
    "Clinet ID: " + layer.feature.properties.CLIENT_ID
+}).addTo(map);
+
+L.geoJson(ms, {
+  style: majorStyle,
+}).bindPopup(function (layer) {
+  return "River: " + layer.feature.properties.Name
 }).addTo(map);
 
  var geojson = L.geoJson(clipstream, {
