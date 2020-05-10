@@ -1,16 +1,3 @@
-// var myStyle = function(feature) {
-//   // return {fillColor: 'red'};
-// switch(feature.properties.name) {
-//   case 'Lou Wolf Lot, next to rec center, HIGH PRIORITY': return {color: "red", fillOpacity: 3, weight: 1};
-//   default: return {
-//     color:"MidnightBlue",
-//     fillOpacity: 1,
-//     weight: 1
-//   };
-// }
-// };
-
-
 var bufferStyle = {
     "color": "orange",
     "weight": 5,
@@ -43,20 +30,6 @@ function onEachFeature(feature, layer) {
         mouseout: resetHighlight,
     });
 }
-
-  //new icon parameters
-
-// $(document).ready(function() {
-
-// var pennLogo = L.icon({
-//       iconUrl: 'images/pennLogo.png', //source, online search
-//       iconSize: [64, 64],
-//       iconAnchor: [0, 0],
-//       popupAnchor: [-1, -5],
-// });
-// console.log(pennLogo);
-// //
-// //
 
 var geojson = L.geoJson(hf, {
  // style: myStyle,
