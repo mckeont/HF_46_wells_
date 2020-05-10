@@ -34,12 +34,7 @@
   border-width: 2px;
   border-radius: 10%;
 }
-/* .ceetImage {
-  position: absolute;
-  height: 12%;
-  width: 85%;
-} */
-
+/
 </style>
 
 <body>
@@ -49,7 +44,7 @@
   <div><p> These are the 46 HF wells selected by Krissy. https://www.youtube.com/watch?v=JiiNRnQKEvk  <br> </br> The icons represent all 46 HF wells. <br> </br>
     The orange circles are 1000 foot buffers from each well.<br> </br>
     The light blue polylines within the buffers are segments of streams/rivers within close proximity to a HF well.<br> </br>
-    The darker blue polylines outside of the buffers are major rivers in PA.
+    The darker blue polylines outside of the buffers are major rivers in PA with a Strahler stream order greater than 5. https://en.wikipedia.org/wiki/Stream_order
 
     Click on wells and streams to view more info. <br> </br>
 
@@ -67,47 +62,6 @@
 
 <div></div>
   </div>
-  <!-- Modal -->
-  <!-- <div id="myModal" class="modal fade modal-dialog modal-md modalbox container-fluid" role="dialog">
-    <div class="modal-dialog">
-       <div class="modal-content">
-         <div class="modal-header">
-           <button type="button" class="close" data-dismiss="modal">&times;</button>
-           <h4 class="modal-title text-center"><b>Welcome to the Lead Sampling Database!<b></h4>
-         </div>
-         <div class="modal-body text-center well">
-           <p style="margin-left:20px "> Explore Our Lead Soil Sampling Data! <br>
-             Click a point to access pop-up information <br>
-            </p>
-         </div>
-         <div class="modal-body text-center well" style="background-color: tomato">
-           <p style="padding-left:25px">
-              This map is continuously updated.<br>
-           Developed by Tom McKeon </p></h6>
-         </div>
-         <div class= "modal-body well">
-<center>
-           <a><button id="lanc" class="button1">  Lancaster </button><a>
-           <a><button id="philly" class="button1"> Philadelphia</button><a>
-</center>
-         </div>
-         <div class="modal-footer text-center well">
-           <h6>
-             <p style="padding-right:200px">
-               <em>Disclaimer</em>:<br>
-               Points are not exact.<br>
-               GPS data are estimates based on near addresses<br>
-               Lead soil levels vary greatly even within inches. <br>
-               This is only meant to act as a general reference.
-            </p>
-          </h6>
-           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-         </div>
-       </div>
-     </div>
-   </div>
-   <!-End of Modal -->
-   <!-- <button> -->
 
     <!-- JS IMPORTS -->
     <div id="map" style=" position: fixed; right: 0; left: 300px; top: 0; bottom: 0 "></div>
