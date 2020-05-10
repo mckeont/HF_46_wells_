@@ -1,6 +1,6 @@
 var map = L.map('map', {
   center: [41.753680, -76.430739],
-  zoom: 11,
+  zoom: 10,
   // layers: [Satellite, Terrain]
 });
 //
